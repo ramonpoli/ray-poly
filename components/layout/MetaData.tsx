@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import getConfig from "next/config";
-import appDefaults from "../config/app-defaults";
+import appDefaults from "../../config/app-defaults";
 
 const MetaData: React.FC = () => {
   // const config = getConfig();

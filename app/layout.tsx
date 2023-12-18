@@ -1,8 +1,8 @@
-import Footer from "./components/Footer/Footer";
-import Header from "./components/Header/Header";
+import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import MetaData from "./layoutComponents/MetaData";
+import MetaData from "../components/layout/MetaData";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -32,7 +32,7 @@ export default function RootLayout({
           height={"100%"}
         >
           <Header />
-          <Box></Box>
+          <Box mb={4}></Box>
           {children}
           <Footer />
         </Box>

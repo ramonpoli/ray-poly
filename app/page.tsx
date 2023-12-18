@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import Image from "next/image";
-import MediaCard from "./components/MediaCard";
+import MediaCard from "../components/MediaCard";
 
 export default function Home() {
   return (
