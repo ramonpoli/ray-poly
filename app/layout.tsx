@@ -7,7 +7,8 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-import { Box } from "@mui/material";
+import { Box, ThemeProvider } from "@mui/material";
+import { theme } from "@/config/materialUiTheme";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,21 +23,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <MetaData />
-      <body className={inter.className}>
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"space-between"}
-          height={"100%"}
-        >
-          <Header />
-          <Box mb={4}></Box>
-          {children}
-          <Footer />
-        </Box>
-      </body>
-    </html>
+    <ThemeProvider theme={theme}>
+      <html lang="en">
+        <MetaData />
+        <body className={inter.className}>
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            justifyContent={"space-between"}
+            height={"100%"}
+          >
+            <Header />
+            <Box mb={4}></Box>
+            {children}
+            <Footer />
+          </Box>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }

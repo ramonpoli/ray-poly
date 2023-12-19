@@ -2,12 +2,13 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { FC } from "react";
 import HeroStyles from "./Hero.module.scss";
+import Subtitle1 from "../Typography/Subtitle1";
 
 const Hero: FC = () => {
   return (
     <div className={HeroStyles.Hero}>
       <Box display={"flex"} flexDirection={"column"} flex={3}>
-        <Typography>Insights</Typography>
+        <Subtitle1>Insights</Subtitle1>
         <Typography variant="h1">Personal Website</Typography>
         <Typography>
           Elit vis eleifend integer mi odio posuere duis mattis vestibulum
