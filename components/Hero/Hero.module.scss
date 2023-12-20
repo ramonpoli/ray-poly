@@ -3,6 +3,7 @@
   gap: 64px;
   padding: 32px 0 64px;
   align-items: center;
+  flex-direction: column;
 
   .LeftContent {
     display: flex;
@@ -28,5 +29,11 @@
   }
   .CTA {
     margin-top: 24px;
+  }
+}
+
+@include from-medium-up {
+  .Hero {
+    flex-direction: row;
   }
 }

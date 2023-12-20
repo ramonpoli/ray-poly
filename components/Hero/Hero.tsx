@@ -9,20 +9,16 @@ const Hero: FC = () => {
   return (
     <div className={HeroStyles.Hero}>
       <div className={HeroStyles.LeftContent}>
-        <Subtitle1>Insights</Subtitle1>
+        <Subtitle1>Landing page</Subtitle1>
         <Typography variant="h1" fontWeight={600} fontSize={"3.75em"}>
           Personal Website
         </Typography>
         <Typography>
-          Elit vis eleifend integer mi odio posuere duis mattis vestibulum
-          penatibus libero mi felis massa vivamus porta viverra. Magna etiam
-          lorem
+          Web developer from London with extensive experience in the front-end,
+          user experience is my top priority and I love to create the best
+          applications out there.
         </Typography>
-        {/* CTA */}
-
-        <PrimaryButton className={HeroStyles.CTA}>
-          Magna etiam lorem
-        </PrimaryButton>
+        <PrimaryButton className={HeroStyles.CTA}>Primary button</PrimaryButton>
       </div>
       <Box flex={2}>
         <div className={HeroStyles.ImageContainer}>
