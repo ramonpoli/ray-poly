@@ -20,7 +20,7 @@ const Hero: FC = () => {
         </Typography>
         <PrimaryButton className={HeroStyles.CTA}>Primary button</PrimaryButton>
       </div>
-      <Box flex={2}>
+      <Box flex={2} width={"100%"}>
         <div className={HeroStyles.ImageContainer}>
           <Image
             src="/me.png"

@@ -1,3 +1,5 @@
+@import "../../app/styles/breakpoints.scss";
+
 .Hero {
   display: flex;
   gap: 64px;
@@ -10,10 +12,12 @@
     flex-direction: column;
     flex: 3;
     gap: 24px;
+    align-items: center;
+    text-align: center;
   }
   .ImageContainer {
     position: relative;
-    height: 35rem;
+    height: 24rem;
     border-radius: 1.5rem;
     border-color: var(--primary);
     border-style: solid;
@@ -35,5 +39,12 @@
 @include from-medium-up {
   .Hero {
     flex-direction: row;
+    .LeftContent {
+      align-items: initial;
+      text-align: initial;
+    }
+    .ImageContainer {
+      height: 35rem;
+    }
   }
 }

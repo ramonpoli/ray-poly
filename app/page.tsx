@@ -1,4 +1,4 @@
-import HomepageStyles from "./homepage.module.scss";
+import HomepageStyles from "./styles/homepage.module.scss";
 import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
