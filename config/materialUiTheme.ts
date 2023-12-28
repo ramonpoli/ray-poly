@@ -11,13 +11,13 @@ export const theme = createTheme({
       main: "#1c3738",
     },
     background: {
-      default: "#000f08",
+      default: "#171a1c",
       paper: "#1c3738",
     },
     divider: "#B39C4D",
     text: {
-      primary: "rgba(255,255,255,0.87)",
-      secondary: "#33FFCE",
+      primary: "#FFFFFF",
+      secondary: "#FFFFFF",
       disabled: "rgb(0, 178, 135)",
     },
   },
