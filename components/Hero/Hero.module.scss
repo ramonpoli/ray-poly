@@ -15,22 +15,6 @@
     align-items: center;
     text-align: center;
   }
-  .ImageContainer {
-    position: relative;
-    height: 24rem;
-    border-radius: 1.5rem;
-    border-color: var(--primary);
-    border-style: solid;
-    border-width: 2px;
-  }
-  .Image {
-    object-fit: cover;
-    object-position: center;
-    padding: 0.75rem;
-    border-radius: inherit !important;
-    max-width: calc(100% - 24px);
-    max-height: calc(100% - 24px);
-  }
   .CTA {
     margin-top: 24px;
   }
