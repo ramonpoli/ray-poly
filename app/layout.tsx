@@ -25,17 +25,9 @@ export default function RootLayout({
         <html lang="en">
           <MetaData />
           <body className={inter.className}>
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
-              justifyContent={"space-between"}
-              height={"100%"}
-            >
-              <Header />
-              <Box mb={4}></Box>
-              {children}
-              <Footer />
-            </Box>
+            <Header />
+            {children}
+            <Footer />
           </body>
         </html>
       </ThemeProvider>
