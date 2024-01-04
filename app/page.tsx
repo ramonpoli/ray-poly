@@ -9,6 +9,7 @@ export default function Home() {
       <Hero />
       <Divider />
       <FeatureTiles />
+      {/* TODO: Social media footer and new highlight section */}
     </main>
   );
 }
