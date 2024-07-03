@@ -2,6 +2,7 @@ import Divider from "@/components/Divider/Divider";
 import HomepageStyles from "./styles/homepage.module.scss";
 import Hero from "@/components/Hero/Hero";
 import FeatureTiles from "@/components/FeatureTiles/FeatureTiles";
+import SocialMedias from "@/components/SocialMedias/SocialMedias";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Hero />
       <Divider />
       <FeatureTiles />
-      {/* TODO: Social media footer and new highlight section */}
+      <SocialMedias />
+      {/* TODO: footer and new highlight section */}
     </main>
   );
 }

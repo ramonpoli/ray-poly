@@ -1,0 +1,6 @@
+.IconLink {
+  visibility: hidden;
+  &.Visible {
+    visibility: visible;
+  }
+}
