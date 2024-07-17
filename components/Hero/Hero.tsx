@@ -11,17 +11,20 @@ const Hero: FC = () => {
   return (
     <div className={HeroStyles.Hero}>
       <div className={HeroStyles.LeftContent}>
-        <Subtitle1>Landing page</Subtitle1>
-        <Title>Personal Website</Title>
+        <Title>Ramon Polidura Rueda</Title>
         <Typography>
-          Web developer from London with extensive experience in the front-end,
-          user experience is my top priority and I love to create the best
-          applications out there.
+          Senior web developer delivering excellent user experience since 2011.
+          Code practices and UX are my top priorities when it comes to
+          delivering a project, no shortcuts, no compromises.
         </Typography>
-        <PrimaryButton className={HeroStyles.CTA}>Primary button</PrimaryButton>
+        <PrimaryButton className={HeroStyles.CTA}>More about me</PrimaryButton>
       </div>
       <Box flex={2} width={"100%"}>
-        <CenteredImage src={"/me.png"} alt={"Ray Poly's profile image"} tall />
+        <CenteredImage
+          src={"/me_ha.png"}
+          alt={"Ray Poly's profile image"}
+          tall
+        />
       </Box>
     </div>
   );
