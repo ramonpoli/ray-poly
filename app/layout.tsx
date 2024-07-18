@@ -3,7 +3,7 @@ import Header from "../components/Header/Header";
 import "./styles/globals.scss";
 import { Inter } from "next/font/google";
 import MetaData from "../components/layout/MetaData";
-import {  ThemeProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material";
 import { theme } from "@/config/materialUiTheme";
 import { StrictMode } from "react";
 

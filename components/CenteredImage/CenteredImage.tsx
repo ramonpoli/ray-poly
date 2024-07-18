@@ -2,7 +2,7 @@ import { FC } from "react";
 import CenteredImageStyles from "./CenteredImage.module.scss";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { Box, SvgIcon } from "@mui/material";
+import { Box } from "@mui/material";
 
 type CenteredImageProps = {
   src: string | StaticImport;
