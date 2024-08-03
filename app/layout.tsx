@@ -1,6 +1,6 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import "./styles/globals.scss";
+import "../styles/globals.scss";
 import { Inter } from "next/font/google";
 import MetaData from "../components/layout/MetaData";
 import { ThemeProvider } from "@mui/material";
@@ -26,7 +26,7 @@ export default function RootLayout({
           <MetaData />
           <body className={inter.className}>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
           </body>
         </html>

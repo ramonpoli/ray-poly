@@ -1,4 +1,5 @@
-import { Box, Stack } from "@mui/material";
+"use client";
+import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import { FC, Fragment } from "react";
 import InterpolatedRowsStyles from "./InterpolatedRows.module.scss";
@@ -19,7 +20,6 @@ const InterpolatedRows: FC<Props> = ({ rows }) => {
       {rows.map((row: Row, index: number) => {
         return (
           <div className={InterpolatedRowsStyles.Row} key={`row-${index}`}>
-            <div className={InterpolatedRowsStyles.Text}>{row.text}</div>
             <div className={InterpolatedRowsStyles.ImageContainer}>
               <Image
                 src={row.image.url}
@@ -28,6 +28,9 @@ const InterpolatedRows: FC<Props> = ({ rows }) => {
                 className={InterpolatedRowsStyles.Image}
               />
             </div>
+            <Typography className={InterpolatedRowsStyles.Text}>
+              {row.text}
+            </Typography>
           </div>
         );
       })}
