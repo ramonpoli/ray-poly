@@ -2,6 +2,7 @@
 @import "@fontsource/roboto/400.css";
 @import "@fontsource/roboto/500.css";
 @import "@fontsource/roboto/700.css";
+@import "./breakpoints.scss";
 
 :root {
   // text colors
@@ -25,4 +26,18 @@ body {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+}
+
+.display-desktop {
+  display: none;
+  @include from-medium-up {
+    display: block;
+  }
+}
+
+.hide-desktop {
+  display: block;
+  @include from-medium-up {
+    display: none;
+  }
 }
