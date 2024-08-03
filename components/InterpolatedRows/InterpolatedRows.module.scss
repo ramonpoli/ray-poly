@@ -1,0 +1,48 @@
+@import "../../styles/breakpoints.scss";
+
+.Row {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.Text {
+  flex: 1;
+  padding: 24px 16px;
+}
+
+.ImageContainer {
+  width: 100%;
+  position: relative;
+  height: 500px;
+  border-radius: 1.5rem;
+  border-color: var(--primary);
+  border-style: solid;
+  border-width: 2px;
+}
+
+.Image {
+  object-fit: cover;
+  object-position: center;
+  padding: 0.75rem;
+  border-radius: inherit !important;
+  max-width: calc(100% - 24px);
+  max-height: calc(100% - 24px);
+  & svg {
+    font-size: 148px;
+  }
+}
+
+@include from-medium-up {
+  .Row {
+    flex-direction: row;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+  .ImageContainer {
+    width: 400px;
+    height: 300px;
+  }
+}

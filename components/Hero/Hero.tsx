@@ -20,11 +20,7 @@ const Hero: FC = () => {
         <PrimaryButton className={HeroStyles.CTA}>More about me</PrimaryButton>
       </div>
       <Box flex={2} width={"100%"}>
-        <CenteredImage
-          src={"/me_ha.png"}
-          alt={"Ray Poly's profile image"}
-          tall
-        />
+        <CenteredImage src={"/me.JPG"} alt={"Ray Poly's profile image"} tall />
       </Box>
     </div>
   );
