@@ -6,12 +6,12 @@ import SocialMedias from "@/components/SocialMedias/SocialMedias";
 
 export default function Home() {
   return (
-    <main className={HomepageStyles.Main}>
+    <section className={HomepageStyles.Main}>
       <Hero />
       <Divider />
       <FeatureTiles />
       <SocialMedias />
       {/* TODO: footer and new highlight section */}
-    </main>
+    </section>
   );
 }
