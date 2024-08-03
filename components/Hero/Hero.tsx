@@ -1,11 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
 import { FC } from "react";
 import HeroStyles from "./Hero.module.scss";
-import Subtitle1 from "../Typography/Subtitle1/Subtitle1";
 import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
 import Title from "../Typography/Title/Title";
 import CenteredImage from "../CenteredImage/CenteredImage";
+import Link from "next/link";
 
 const Hero: FC = () => {
   return (
@@ -17,7 +16,9 @@ const Hero: FC = () => {
           Code practices and UX are my top priorities when it comes to
           delivering a project, no shortcuts, no compromises.
         </Typography>
-        <PrimaryButton className={HeroStyles.CTA}>More about me</PrimaryButton>
+        <PrimaryButton className={HeroStyles.CTA}>
+          <Link href={"/about"}>More about me</Link>
+        </PrimaryButton>
       </div>
       <Box flex={2} width={"100%"}>
         <CenteredImage src={"/me.JPG"} alt={"Ray Poly's profile image"} tall />
