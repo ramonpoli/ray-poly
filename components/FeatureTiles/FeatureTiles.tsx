@@ -30,11 +30,6 @@ const FeatureTiles: FC = () => {
   };
   return (
     <div className={FeatureTilesStyles.FeatureTiles}>
-      <div className={FeatureTilesStyles.LeftContent}>
-        <Subtitle1>Driven by UX excellence</Subtitle1>
-        <Title>Core skills</Title>
-      </div>
-
       <div className={FeatureTilesStyles.ThreeColumns}>
         <Feature
           icon={"trendingUp"}
@@ -51,6 +46,9 @@ const FeatureTiles: FC = () => {
           title="Robustness"
           content="A webpage needs to stand the test of time and I always try to make sure that the website is robust enough to handle all the possible scenarios. This includes tests for all the possible user interactions. And up to date tools."
         />
+      </div>
+      <div className={FeatureTilesStyles.LeftContent}>
+        <Subtitle1>Driven by UX excellence</Subtitle1>
       </div>
     </div>
   );
