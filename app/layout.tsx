@@ -6,6 +6,7 @@ import MetaData from "../components/layout/MetaData";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@/config/materialUiTheme";
 import { StrictMode } from "react";
+import HomepageStyles from "../styles/homepage.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
           <MetaData />
           <body className={inter.className}>
             <Header />
-            <main>{children}</main>
+            <main className={HomepageStyles.Main}>{children}</main>
             <Footer />
           </body>
         </html>

@@ -17,7 +17,7 @@ const FeatureTiles: FC = () => {
     content: string;
   }) => {
     return (
-      <div className={FeatureTilesStyles.Feature}>
+      <section className={FeatureTilesStyles.Feature}>
         <CenteredIcon icon={icon} />
         <div className={FeatureTilesStyles.FeatureContent}>
           <Typography variant="h2" fontWeight={600} fontSize={"2.5em"}>
@@ -25,7 +25,7 @@ const FeatureTiles: FC = () => {
           </Typography>
           <Typography>{content}</Typography>
         </div>
-      </div>
+      </section>
     );
   };
   return (

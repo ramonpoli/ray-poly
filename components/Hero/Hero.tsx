@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Hero: FC = () => {
   return (
-    <div className={HeroStyles.Hero}>
+    <section className={HeroStyles.Hero}>
       <div className={HeroStyles.LeftContent}>
         <Title>Ramon Polidura Rueda</Title>
         <Typography>
@@ -25,7 +25,7 @@ const Hero: FC = () => {
       <Box flex={2} width={"100%"}>
         <CenteredImage src={"/me.JPG"} alt={"Ray Poly's profile image"} tall />
       </Box>
-    </div>
+    </section>
   );
 };
 export default Hero;

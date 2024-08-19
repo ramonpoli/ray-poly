@@ -11,96 +11,98 @@ const SocialMedias: FC = () => {
     "instagram" | "github" | "linkedin" | ""
   >("");
   return (
-    <Stack
-      spacing={{ xs: 1, sm: 2 }}
-      direction={{ xs: "column", lg: "row" }}
-      useFlexGap
-      mt={10}
-      justifyContent={{ xs: "start", lg: "space-between" }}
-      width={"100%"}
-    >
-      <Link
-        href={"https://www.instagram.com/ray.poly.web.developer/"}
-        target="_blank"
-        onMouseOver={() => {
-          setElemHovered("instagram");
-        }}
-        onMouseLeave={() => {
-          setElemHovered("");
-        }}
+    <section>
+      <Stack
+        spacing={{ xs: 1, sm: 2 }}
+        direction={{ xs: "column", md: "row" }}
+        useFlexGap
+        mt={10}
+        justifyContent={{ xs: "start", lg: "space-between" }}
+        width={"100%"}
       >
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          alignItems={"center"}
-          gap={2}
-          minWidth={300}
+        <Link
+          href={"https://www.instagram.com/ray.poly.web.developer/"}
+          target="_blank"
+          onMouseOver={() => {
+            setElemHovered("instagram");
+          }}
+          onMouseLeave={() => {
+            setElemHovered("");
+          }}
         >
-          <InstagramSvgComponent fill={"#00ffc2"} />
-          <Typography
-            className={`${styles.IconLink} ${
-              elemHovered === "instagram" ? styles.Visible : ""
-            }`}
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            gap={2}
+            minWidth={300}
           >
-            ray.poly.web.developer
-          </Typography>
-        </Box>
-      </Link>
-      <Link
-        href={"https://www.linkedin.com/in/ramon-polidura/"}
-        target="_blank"
-        onMouseOver={() => {
-          setElemHovered("linkedin");
-        }}
-        onMouseLeave={() => {
-          setElemHovered("");
-        }}
-      >
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          alignItems={"center"}
-          gap={2}
-          minWidth={300}
+            <InstagramSvgComponent fill={"#00ffc2"} />
+            <Typography
+              className={`${styles.IconLink} ${
+                elemHovered === "instagram" ? styles.Visible : ""
+              }`}
+            >
+              ray.poly.web.developer
+            </Typography>
+          </Box>
+        </Link>
+        <Link
+          href={"https://www.linkedin.com/in/ramon-polidura/"}
+          target="_blank"
+          onMouseOver={() => {
+            setElemHovered("linkedin");
+          }}
+          onMouseLeave={() => {
+            setElemHovered("");
+          }}
         >
-          <LinkedInSvgComponent fill={"#00ffc2"} />
-          <Typography
-            className={`${styles.IconLink} ${
-              elemHovered === "linkedin" ? styles.Visible : ""
-            }`}
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            gap={2}
+            minWidth={300}
           >
-            ramon-polidura
-          </Typography>
-        </Box>
-      </Link>
-      <Link
-        href={"https://github.com/ramonpoli"}
-        target="_blank"
-        onMouseOver={() => {
-          setElemHovered("github");
-        }}
-        onMouseLeave={() => {
-          setElemHovered("");
-        }}
-      >
-        <Box
-          display={"flex"}
-          flexDirection={"column"}
-          alignItems={"center"}
-          gap={2}
-          minWidth={300}
+            <LinkedInSvgComponent fill={"#00ffc2"} />
+            <Typography
+              className={`${styles.IconLink} ${
+                elemHovered === "linkedin" ? styles.Visible : ""
+              }`}
+            >
+              ramon-polidura
+            </Typography>
+          </Box>
+        </Link>
+        <Link
+          href={"https://github.com/ramonpoli"}
+          target="_blank"
+          onMouseOver={() => {
+            setElemHovered("github");
+          }}
+          onMouseLeave={() => {
+            setElemHovered("");
+          }}
         >
-          <GithubSvgComponent fill={"#00ffc2"} />
-          <Typography
-            className={`${styles.IconLink} ${
-              elemHovered === "github" ? styles.Visible : ""
-            }`}
+          <Box
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            gap={2}
+            minWidth={300}
           >
-            ramonpoli
-          </Typography>
-        </Box>
-      </Link>
-    </Stack>
+            <GithubSvgComponent fill={"#00ffc2"} />
+            <Typography
+              className={`${styles.IconLink} ${
+                elemHovered === "github" ? styles.Visible : ""
+              }`}
+            >
+              ramonpoli
+            </Typography>
+          </Box>
+        </Link>
+      </Stack>
+    </section>
   );
 };
 export default SocialMedias;

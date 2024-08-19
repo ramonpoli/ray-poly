@@ -1,17 +1,21 @@
 import Divider from "@/components/Divider/Divider";
-import HomepageStyles from "../styles/homepage.module.scss";
 import Hero from "@/components/Hero/Hero";
 import FeatureTiles from "@/components/FeatureTiles/FeatureTiles";
 import SocialMedias from "@/components/SocialMedias/SocialMedias";
+import ListOfFeatures from "@/components/ListOfFeatures/ListOfFeatures";
+import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <section className={HomepageStyles.Main}>
+    <Fragment>
       <Hero />
       <Divider />
       <FeatureTiles />
+      <Divider />
       <SocialMedias />
-      {/* TODO: footer and new highlight section */}
-    </section>
+      <Divider />
+      <ListOfFeatures />
+      <Divider />
+    </Fragment>
   );
 }
