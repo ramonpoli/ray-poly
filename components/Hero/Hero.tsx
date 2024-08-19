@@ -17,7 +17,9 @@ const Hero: FC = () => {
           delivering a project, no shortcuts, no compromises.
         </Typography>
         <PrimaryButton className={HeroStyles.CTA}>
-          <Link href={"/about"}>More about me</Link>
+          <Link href={"/about"}>
+            <Typography color={"text.secondary"}>More about me</Typography>
+          </Link>
         </PrimaryButton>
       </div>
       <Box flex={2} width={"100%"}>

@@ -1,24 +1,36 @@
 "use client";
-import { ThemeOptions, createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
+const primaryColor = "#00ffc2";
+const secondaryColor = "#1c3738";
 export const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#00ffc2",
+      main: primaryColor,
     },
     secondary: {
-      main: "#1c3738",
+      main: secondaryColor,
     },
     background: {
       default: "#171a1c",
-      paper: "#1c3738",
+      paper: secondaryColor,
     },
     divider: "#B39C4D",
     text: {
       primary: "#FFFFFF",
-      secondary: "#FFFFFF",
+      secondary: secondaryColor,
       disabled: "rgb(0, 178, 135)",
+    },
+    
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: secondaryColor,
+        },
+      },
     },
   },
 });

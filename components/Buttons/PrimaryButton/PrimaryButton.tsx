@@ -13,6 +13,10 @@ const PrimaryButton: FC<PropsWithChildren<Props & ButtonProps>> = ({
     <Button
       variant="contained"
       size="large"
+      sx={{
+        fontSize: "1.2rem",
+        fontWeight: "bold",
+      }}
       endIcon={
         <Typography lineHeight={"100%"} pl={4}>
           <ArrowForwardIosIcon fontSize={"small"} />
