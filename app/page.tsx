@@ -1,5 +1,5 @@
 import Divider from "@/components/Divider/Divider";
-import Hero from "@/components/Hero/Hero";
+import Hero from "./Hero/Hero";
 import FeatureTiles from "@/components/FeatureTiles/FeatureTiles";
 import SocialMedias from "@/components/SocialMedias/SocialMedias";
 import ListOfFeatures from "@/components/ListOfFeatures/ListOfFeatures";

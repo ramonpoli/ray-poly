@@ -1,9 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import { FC } from "react";
 import HeroStyles from "./Hero.module.scss";
-import PrimaryButton from "../Buttons/PrimaryButton/PrimaryButton";
-import Title from "../Typography/Title/Title";
-import CenteredImage from "../CenteredImage/CenteredImage";
+import PrimaryButton from "@/components/Buttons/PrimaryButton/PrimaryButton";
+import Title from "@/components/Typography/Title/Title";
+import CenteredImage from "@/components/CenteredImage/CenteredImage";
 import Link from "next/link";
 
 const Hero: FC = () => {

@@ -43,7 +43,7 @@ const ListOfFeatures: React.FC = () => {
         {skills.map((skill, index) => (
           <li key={index} className={styles.item}>
             <Card className={styles.card}>
-              <CardContent>
+              <CardContent className={styles.cardContent}>
                 <Typography variant="h4" className={styles.skillName}>
                   {skill.name}
                 </Typography>

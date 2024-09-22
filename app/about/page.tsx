@@ -1,10 +1,12 @@
-import { Box } from "@mui/material";
-import styles from "./about.module.scss";
+// import styles from "./about.module.scss";
 import InterpolatedRows from "@/components/InterpolatedRows/InterpolatedRows";
+import { Fragment } from "react";
 
 export default function About() {
   return (
-    <main className={styles.Main}>
+    <Fragment>
+      <h1>About me</h1>
+      <br />
       <InterpolatedRows
         rows={[
           {
@@ -36,7 +38,6 @@ export default function About() {
             },
           },
         ]}
-      />
-    </main>
+      /></Fragment>
   );
 }

@@ -22,7 +22,7 @@ export const theme = createTheme({
       secondary: secondaryColor,
       disabled: "rgb(0, 178, 135)",
     },
-    
+
   },
   components: {
     MuiButton: {

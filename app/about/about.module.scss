@@ -1,18 +1,1 @@
 @import "../../styles/breakpoints.scss";
-
-.Main {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  padding-top: 24px;
-  margin-top: 24px;
-  align-items: stretch;
-  max-width: 100%;
-  padding: 1.5rem 2rem;
-}
-
-@include from-medium-up {
-  .Main {
-    padding: 3rem 6rem;
-  }
-}
