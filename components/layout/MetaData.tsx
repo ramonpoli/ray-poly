@@ -4,8 +4,6 @@ import getConfig from "next/config";
 import appDefaults from "../../config/app-defaults";
 
 const MetaData: React.FC = () => {
-  // const config = getConfig();
-  // console.log('config: ', config)
   const defaultImageUrl = `localhost/img/logo.png`; // `${config.siteDomain}/img/logo.png`;
   const title = appDefaults.title;
   const description = appDefaults.description;
