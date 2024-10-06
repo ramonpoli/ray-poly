@@ -6,7 +6,7 @@ import PrimaryButton from "@/components/Buttons/PrimaryButton/PrimaryButton";
 import Title from "@/components/Typography/Title/Title";
 import CenteredImage from "@/components/CenteredImage/CenteredImage";
 import Link from "next/link";
-import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const Hero: FC = () => {
   return (
@@ -19,10 +19,7 @@ const Hero: FC = () => {
           delivering a project, no shortcuts, no compromises.
         </Typography>
         <PrimaryButton className={HeroStyles.CTA}>
-          <Link href={"/about"} onClick={() =>{ 
-            sendGTMEvent({ event: 'moreAboutMeClick'}); 
-            sendGAEvent('event', 'moreAboutMeClick')
-            }}>
+          <Link href={"/about"} onClick={() =>{ sendGTMEvent({ event: 'moreAboutMeClick'}); }}>
             <Typography color={"text.secondary"}>More about me</Typography>
           </Link>
         </PrimaryButton>

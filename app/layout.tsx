@@ -6,7 +6,7 @@ import MetaData from "../components/layout/MetaData";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@/config/materialUiTheme";
 import { StrictMode } from "react";
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import HomepageStyles from "../styles/homepage.module.scss";
 
@@ -25,8 +25,7 @@ export default function RootLayout({
     <StrictMode>
       <ThemeProvider theme={theme}>
         <html lang="en">
-          <GoogleTagManager gtmId="G-K43THS25FL" />
-          <GoogleAnalytics gaId="G-K43THS25FL" />
+        <GoogleTagManager gtmId="G-K43THS25FL" />
           <MetaData />
           <body className={inter.className}>
             <Header />

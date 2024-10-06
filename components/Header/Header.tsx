@@ -12,7 +12,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { FC, useState } from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
-import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const MenuItems: { link: string; text: string }[] = [
   { link: "/about", text: "About me" },
@@ -70,8 +70,7 @@ const Header: FC = () => {
             </MenuItem>
           ))}
         </Menu>
-        <Link href={"/"} onClick={() =>{ sendGTMEvent({ event: 'navbarHomepageClick'});
-      sendGAEvent('event', 'navbarHomepageClick') }}>
+        <Link href={"/"} onClick={() =>{ sendGTMEvent({ event: 'navbarHomepageClick'}); }}>
           <Typography variant="h6" color="text.primary">
             Ray Poly Web developer
           </Typography>
