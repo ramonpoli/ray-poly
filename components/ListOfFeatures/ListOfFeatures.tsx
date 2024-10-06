@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ListOfFeatures.module.scss";
 import { Card, CardContent, Typography } from "@mui/material";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 interface Skill {
   name: string;
@@ -41,7 +42,7 @@ const ListOfFeatures: React.FC = () => {
       </Typography>
       <ul className={styles.list}>
         {skills.map((skill, index) => (
-          <li key={index} className={styles.item}>
+          <li key={index} className={styles.item} onMouseEnter={()=>{sendGTMEvent({ event: 'hoverOverSkill', value: skill.name }); }}>
             <Card className={styles.card}>
               <CardContent className={styles.cardContent}>
                 <Typography variant="h4" className={styles.skillName}>

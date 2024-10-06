@@ -6,6 +6,8 @@ import MetaData from "../components/layout/MetaData";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "@/config/materialUiTheme";
 import { StrictMode } from "react";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 import HomepageStyles from "../styles/homepage.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +25,7 @@ export default function RootLayout({
     <StrictMode>
       <ThemeProvider theme={theme}>
         <html lang="en">
+        <GoogleTagManager gtmId="G-K43THS25FL" />
           <MetaData />
           <body className={inter.className}>
             <Header />
