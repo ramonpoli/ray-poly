@@ -5,7 +5,7 @@ import InstagramSvgComponent from "../SVGs/InstagramSvgComponent";
 import LinkedInSvgComponent from "../SVGs/LinkedInSvgComponent";
 import GithubSvgComponent from "../SVGs/GithubSvgComponent";
 import styles from "./SocialMedias.module.scss";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
 
 const SocialMedias: FC = () => {
   const [elemHovered, setElemHovered] = useState<
@@ -30,7 +30,8 @@ const SocialMedias: FC = () => {
           onMouseLeave={() => {
             setElemHovered("");
           }} 
-          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'instagram'}); }}
+          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'instagram'});
+          sendGAEvent('event', 'socialMediaClick', { value: 'instagram' }) }}
         >
           <Box
             display={"flex"}
@@ -58,7 +59,8 @@ const SocialMedias: FC = () => {
           onMouseLeave={() => {
             setElemHovered("");
           }}
-          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'linekedin'}); }}
+          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'linekedin'});
+          sendGAEvent('event', 'socialMediaClick', { value: 'linekedin' }) }}
         >
           <Box
             display={"flex"}
@@ -86,7 +88,8 @@ const SocialMedias: FC = () => {
           onMouseLeave={() => {
             setElemHovered("");
           }}
-          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'github'}); }}
+          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'github'}); 
+          sendGAEvent('event', 'socialMediaClick', { value: 'github' }) }}
         >
           <Box
             display={"flex"}
