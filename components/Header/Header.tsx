@@ -1,7 +1,6 @@
 "use client";
 import {
   AppBar,
-  Box,
   IconButton,
   Menu,
   MenuItem,
@@ -12,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { FC, useState } from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGoogleEvent } from "@/utils/googleAnalytics";
 
 const MenuItems: { link: string; text: string }[] = [
   { link: "/about", text: "About me" },
@@ -64,13 +63,13 @@ const Header: FC = () => {
         >
           {MenuItems.map((item) => (
             <MenuItem className={styles.NavItem} key={item.text}>
-              <Link href={item.link}>
+              <Link href={item.link} onClick={() => { sendGoogleEvent(`navbar_${item.text}Clicked`) }}>
                 <Typography color={"text.primary"}>{item.text}</Typography>
               </Link>
             </MenuItem>
           ))}
         </Menu>
-        <Link href={"/"} onClick={() =>{ sendGTMEvent({ event: 'navbarHomepageClick'}); }}>
+        <Link href={"/"} onClick={() => { sendGoogleEvent('navbar_logoClicked') }}>
           <Typography variant="h6" color="text.primary">
             Ray Poly Web developer
           </Typography>

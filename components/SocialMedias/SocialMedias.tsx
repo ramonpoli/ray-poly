@@ -5,7 +5,7 @@ import InstagramSvgComponent from "../SVGs/InstagramSvgComponent";
 import LinkedInSvgComponent from "../SVGs/LinkedInSvgComponent";
 import GithubSvgComponent from "../SVGs/GithubSvgComponent";
 import styles from "./SocialMedias.module.scss";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { sendGoogleEvent } from "@/utils/googleAnalytics";
 
 const SocialMedias: FC = () => {
   const [elemHovered, setElemHovered] = useState<
@@ -29,8 +29,8 @@ const SocialMedias: FC = () => {
           }}
           onMouseLeave={() => {
             setElemHovered("");
-          }} 
-          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'instagram'}); }}
+          }}
+          onClick={() => { sendGoogleEvent('socialMediaClick', 'instagram') }}
         >
           <Box
             display={"flex"}
@@ -41,9 +41,8 @@ const SocialMedias: FC = () => {
           >
             <InstagramSvgComponent fill={"#00ffc2"} />
             <Typography
-              className={`${styles.IconLink} ${
-                elemHovered === "instagram" ? styles.Visible : ""
-              }`}
+              className={`${styles.IconLink} ${elemHovered === "instagram" ? styles.Visible : ""
+                }`}
             >
               ray.poly.web.developer
             </Typography>
@@ -58,7 +57,7 @@ const SocialMedias: FC = () => {
           onMouseLeave={() => {
             setElemHovered("");
           }}
-          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'linekedin'}); }}
+          onClick={() => { sendGoogleEvent('socialMediaClick', 'linekedin') }}
         >
           <Box
             display={"flex"}
@@ -69,9 +68,8 @@ const SocialMedias: FC = () => {
           >
             <LinkedInSvgComponent fill={"#00ffc2"} />
             <Typography
-              className={`${styles.IconLink} ${
-                elemHovered === "linkedin" ? styles.Visible : ""
-              }`}
+              className={`${styles.IconLink} ${elemHovered === "linkedin" ? styles.Visible : ""
+                }`}
             >
               ramon-polidura
             </Typography>
@@ -86,7 +84,7 @@ const SocialMedias: FC = () => {
           onMouseLeave={() => {
             setElemHovered("");
           }}
-          onClick={() =>{ sendGTMEvent({ event: 'socialMediaClick', value: 'github'}); }}
+          onClick={() => { sendGoogleEvent('socialMediaClick', 'github') }}
         >
           <Box
             display={"flex"}
@@ -97,9 +95,8 @@ const SocialMedias: FC = () => {
           >
             <GithubSvgComponent fill={"#00ffc2"} />
             <Typography
-              className={`${styles.IconLink} ${
-                elemHovered === "github" ? styles.Visible : ""
-              }`}
+              className={`${styles.IconLink} ${elemHovered === "github" ? styles.Visible : ""
+                }`}
             >
               ramonpoli
             </Typography>
