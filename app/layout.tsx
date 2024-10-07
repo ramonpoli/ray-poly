@@ -25,7 +25,7 @@ export default function RootLayout({
     <StrictMode>
       <ThemeProvider theme={theme}>
         <html lang="en">
-        <GoogleTagManager gtmId="G-K43THS25FL" />
+        <GoogleTagManager gtmId="GTM-KL7SCX8W" />
           <MetaData />
           <body className={inter.className}>
             <Header />
