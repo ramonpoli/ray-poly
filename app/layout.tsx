@@ -26,7 +26,7 @@ export default function RootLayout({
       <ThemeProvider theme={theme}>
         <html lang="en">
           <GoogleTagManager gtmId="GTM-KL7SCX8W" />
-          <GoogleAnalytics gaId="G-9LTW0HKTVS" />
+          <GoogleAnalytics gaId="G-K43THS25FL" />
           <MetaData />
           <body className={inter.className}>
             <Header />
