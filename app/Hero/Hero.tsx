@@ -15,8 +15,7 @@ const Hero: FC = () => {
         <Title>Ramon Polidura Rueda</Title>
         <Typography>
           Senior web developer delivering excellent user experience since 2011.
-          Code practices and UX are my top priorities when it comes to
-          delivering a project, no shortcuts, no compromises.
+          Utilizing the latest technologies and applying the best coding practices among web devs.
         </Typography>
         <PrimaryButton className={HeroStyles.CTA}>
           <Link href={"/about"} onClick={() => { sendGoogleEvent('moreAboutMeClick') }}>
