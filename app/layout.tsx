@@ -25,8 +25,8 @@ export default function RootLayout({
     <StrictMode>
       <ThemeProvider theme={theme}>
         <html lang="en">
-          <GoogleTagManager gtmId="GTM-KL7SCX8W" />
-          <GoogleAnalytics gaId="G-K43THS25FL" />
+          <GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER_ID || ""} />
+          <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID || ""} />
           <MetaData />
           <body className={inter.className}>
             <Header />

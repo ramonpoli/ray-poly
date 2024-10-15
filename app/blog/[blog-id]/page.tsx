@@ -1,31 +1,33 @@
-'use client'
-import { FC, useEffect, useState } from "react";
-import Markdown from "react-markdown";
+
+import { BlogPost } from "@/types/Types";
+import { FC } from "react";
+import BlogPage from "./BlogPage";
 
 
+const fetchBlogPost = async (blogId: string): Promise<BlogPost | undefined> => {
+  try {
+
+    const blogPostInformation = await import(`./\(blog-articles\)/${blogId}.ts`);
+    if (blogPostInformation) {
+      const blogPostRead = await fetch(`${process.env.SERVER_URL}/blog-articles/${blogId}.md`);
+      if (blogPostRead) {
+        const blogPostContent = await blogPostRead.text();
+        return ({ ...blogPostInformation, content: blogPostContent });
+      }
+    }
+  } catch (error) {
+    console.error("Error fetching blog post:", error);
+  }
+};
 type Props = {
   params: { "blog-id": string };
 };
-const BlogPage: FC<Props> = ({ params }) => {
-  const [blogPost, setBlogPost] = useState<string | null>(null);
+const Page: FC<Props> = async ({ params }) => {
+  const blogId = params["blog-id"];
+  const blogPost = await fetchBlogPost(blogId);
 
-  useEffect(() => {
-    const fetchBlogPost = async () => {
-      const blogPostRead = await fetch((`./${params["blog-id"]}.md`));
-      if (blogPostRead) {
-        const blogPost = await blogPostRead.text();
-        setBlogPost(blogPost);
-      }
-    };
-    if (!blogPost) {
-      fetchBlogPost();
-    }
-  }, [blogPost, params]);
-  return (
-    <div>
-      <h1>Blog Page: {params["blog-id"]}</h1>
-      {blogPost ? <Markdown>{blogPost}</Markdown> : null}
-    </div>
-  );
+  return blogPost ? (
+    <BlogPage blogPost={blogPost} />
+  ) : <h1>Blog Page: No blog post found</h1>;
 };
-export default BlogPage;
+export default Page;
