@@ -16,7 +16,11 @@ const fetchBlogPost = async (blogId: string): Promise<BlogPost | undefined> => {
       const blogPostRead = await fetch(`${process.env.SERVER_URL}/blog-articles/${blogId}.md`);
       if (blogPostRead) {
         const blogPostContent = await blogPostRead.text();
-        return ({ ...blogPostInformation, content: blogPostContent });
+        return ({
+          title: blogPostInformation.default.title,
+          description: blogPostInformation.default.title,
+          content: blogPostContent
+        });
       }
     }
   } catch (error) {
@@ -29,7 +33,6 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const blogId = params["blog-id"];
   const blogPostInformation = await import(`./\(blog-articles\)/${blogId}.ts`);
-  console.log('✌️blogPostInformation --->', blogPostInformation.default);
 
   return blogPostInformation ? {
     title: blogPostInformation.default.title,
