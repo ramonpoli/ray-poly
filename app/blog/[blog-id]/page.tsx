@@ -10,7 +10,6 @@ type Props = {
 
 const fetchBlogPost = async (blogId: string): Promise<BlogPost | undefined> => {
   try {
-
     const blogPostInformation = await import(`./\(blog-articles\)/${blogId}.ts`);
     if (blogPostInformation) {
       const blogPostRead = await fetch(`${process.env.SERVER_URL}/blog-articles/${blogId}.md`);

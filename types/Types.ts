@@ -6,3 +6,7 @@ export type BlogPostInformation = {
 export type BlogPost = BlogPostInformation & {
   content: string;
 }
+
+export type BlogPostInformationFile = BlogPostInformation & {
+  slug: string;
+}

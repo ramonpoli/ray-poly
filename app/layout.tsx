@@ -11,9 +11,16 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import HomepageStyles from "../styles/homepage.module.scss";
 
 const inter = Inter({ subsets: ["latin"] });
+
 export const metadata = {
   title: "Ramon Polidura",
   description: "Ramon Polidura is a web developer, specialized in front-end development.",
+  applicationName: 'ray-poly-personal-website',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Ray Poly', 'Ramon Polidura', 'Polidura Rueda', 'Web developer', 'Website development', 'London'],
+  authors: [{ name: 'Ray Poly', url: 'https://raypoly.netlify.app' }, { name: 'Ramon Polidura', url: 'https://raypoly.netlify.app' }],
+  creator: 'Ray Poly',
+  publisher: 'Ray Poly',
 };
 
 export default function RootLayout({
