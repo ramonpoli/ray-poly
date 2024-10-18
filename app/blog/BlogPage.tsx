@@ -2,13 +2,15 @@
 import { FC } from "react";
 import { BlogPostInformationFile } from "@/types/Types";
 import { useRouter } from "next/navigation";
+import styles from "./BlogPage.module.scss";
+
 type Props = {
   blogPosts: BlogPostInformationFile[];
 }
-const BlogPostsPage: FC<Props> = ({ blogPosts }) => {
+const BlogPage: FC<Props> = ({ blogPosts }) => {
   const router = useRouter()
   const BlogPost: FC<{ children: React.ReactNode, href: string }> = ({ children, href }) => {
-    return <div onClick={() => { router.push(href) }} >{children}</div>
+    return <div onClick={() => { router.push(href) }} className={styles.BlogPost} >{children}</div>
   }
   return <div>
     {blogPosts.map((blog) => {
@@ -19,4 +21,4 @@ const BlogPostsPage: FC<Props> = ({ blogPosts }) => {
     })}
   </div>
 }
-export default BlogPostsPage;
+export default BlogPage;

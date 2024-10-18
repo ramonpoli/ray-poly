@@ -1,6 +1,6 @@
 import { BlogPostInformationFile } from "@/types/Types";
 import { readdirSync } from "fs";
-import BlogPostsPage from "./BlogPostsPage";
+import BlogPage from "./BlogPage";
 
 const fetchBlogPosts = (): BlogPostInformationFile[] | undefined => {
   try {
@@ -19,6 +19,6 @@ const fetchBlogPosts = (): BlogPostInformationFile[] | undefined => {
 };
 const Page = () => {
   const blogPosts = fetchBlogPosts();
-  return <div>{blogPosts ? <BlogPostsPage blogPosts={blogPosts} /> : 'Blog posts not found'}</div>;
+  return <div>{blogPosts ? <BlogPage blogPosts={blogPosts} /> : 'Blog posts not found'}</div>;
 };
 export default Page;
