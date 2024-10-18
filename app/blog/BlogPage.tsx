@@ -13,9 +13,10 @@ const BlogPage: FC<Props> = ({ blogPosts }) => {
     return <div onClick={() => { router.push(href) }} className={styles.BlogPost} >{children}</div>
   }
   return <div>
+    <h1 className={styles.Header}>Blog Articles</h1>
     {blogPosts.map((blog) => {
       return <BlogPost key={blog.slug} href={`/blog/${blog.slug}`}>
-        <h1>{blog.title}</h1>
+        <h2>{blog.title}</h2>
         <p>{blog.description}</p>
       </BlogPost>
     })}

@@ -1,7 +1,22 @@
+@import '../../styles/breakpoints.scss';
+
 .Nav {
   margin-left: 16px;
+  display: flex;
+  gap: 1em;
+
+  &.NavDesktop {
+    display: none;
+  }
+
   .NavItem {
     display: block;
     padding: 0 16px;
+  }
+}
+
+@include from-medium-up {
+  .Nav.NavDesktop {
+    display: flex;
   }
 }

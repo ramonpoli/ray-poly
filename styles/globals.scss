@@ -42,7 +42,7 @@ main {
   display: none;
 
   @include from-medium-up {
-    display: block;
+    display: initial;
   }
 }
 

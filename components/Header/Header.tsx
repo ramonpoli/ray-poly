@@ -16,6 +16,7 @@ import Image from "next/image";
 
 const MenuItems: { link: string; text: string }[] = [
   { link: "/about", text: "About me" },
+  { link: "/blog", text: "Blog" },
 ];
 
 const Header: FC = () => {
@@ -73,7 +74,7 @@ const Header: FC = () => {
         <Link href={"/"} onClick={() => { sendGoogleEvent('navbar_logoClicked') }}>
           <Image src={'/logos/logo-landscape.png'} alt={'Ray Poly\'s logo'} width={150} height={50} />
         </Link>
-        <nav className={`display-desktop ${styles.Nav}`}>
+        <nav className={`${styles.Nav} ${styles.NavDesktop}`}>
           {MenuItems.map((item) => (
             <Link href={item.link} key={item.text} className={styles.NavItem}>
               <Typography color={"text.primary"}>{item.text}</Typography>
