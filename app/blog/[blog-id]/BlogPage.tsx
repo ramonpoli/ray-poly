@@ -10,7 +10,7 @@ type Props = {
 }
 const BlogPage: FC<Props> = ({ blogPost }) => {
   return <Fragment>
-    <h1>Blog Page: {blogPost.title}</h1>
+    <h1>{blogPost.title}</h1>
     <div className={styles.BlogArticle}>
       <Markdown >{blogPost.content}</Markdown>
     </div>
