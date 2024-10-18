@@ -12,6 +12,7 @@ import { FC, useState } from "react";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import { sendGoogleEvent } from "@/utils/googleAnalytics";
+import Image from "next/image";
 
 const MenuItems: { link: string; text: string }[] = [
   { link: "/about", text: "About me" },
@@ -70,9 +71,7 @@ const Header: FC = () => {
           ))}
         </Menu>
         <Link href={"/"} onClick={() => { sendGoogleEvent('navbar_logoClicked') }}>
-          <Typography variant="h6" color="text.primary">
-            Ray Poly Web developer
-          </Typography>
+          <Image src={'/logos/logo-landscape.png'} alt={'Ray Poly\'s logo'} width={150} height={50} />
         </Link>
         <nav className={`display-desktop ${styles.Nav}`}>
           {MenuItems.map((item) => (

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 type Props = {
-  fill: string;
+  fill?: string;
 };
 const GithubSvgComponent: React.FC<Props> = (props) => (
   <svg
