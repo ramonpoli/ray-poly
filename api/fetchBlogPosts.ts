@@ -10,6 +10,7 @@ export const fetchBlogPosts = (): BlogPostInformationFile[] | undefined => {
       return {
         title: blogPostInformationFile.default.title,
         description: blogPostInformationFile.default.description,
+        image: blogPostInformationFile.default.image,
         slug: blogPostInformation.replace(".ts", "")
       }
     });

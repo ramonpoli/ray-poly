@@ -10,7 +10,11 @@ type Props = {
 const BlogPage: FC<Props> = ({ blogPosts }) => {
   const router = useRouter()
   const BlogPost: FC<{ children: React.ReactNode, href: string }> = ({ children, href }) => {
-    return <div onClick={() => { router.push(href) }} className={styles.BlogPost} >{children}</div>
+    return (
+      <div onClick={() => { router.push(href) }} className={styles.BlogPost} >
+        {children}
+      </div>
+    )
   }
   return <div>
     <h1 className={styles.Header}>Blog Articles</h1>

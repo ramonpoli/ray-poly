@@ -18,6 +18,7 @@ const fetchBlogPost = async (blogId: string): Promise<BlogPost | undefined> => {
         return ({
           title: blogPostInformation.default.title,
           description: blogPostInformation.default.title,
+          image: blogPostInformation.default.image,
           content: blogPostContent
         });
       }
@@ -36,6 +37,12 @@ export async function generateMetadata(
   return blogPostInformation ? {
     title: blogPostInformation.default.title,
     description: blogPostInformation.default.description,
+    keywords: blogPostInformation.default.keywords ?? [],
+    openGraph: {
+      title: blogPostInformation.default.title,
+      description: blogPostInformation.default.description,
+      images: blogPostInformation.default.image,
+    }
   } : {
     title: "Blog Page",
   }
