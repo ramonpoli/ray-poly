@@ -7,6 +7,11 @@
   padding: 24px;
   margin-bottom: 24px;
 }
+
+.RowPointer {
+  cursor: pointer;
+}
+
 .Text {
   flex: 1;
   padding: 24px 16px;
@@ -29,6 +34,7 @@
   border-radius: inherit !important;
   max-width: calc(100% - 24px);
   max-height: calc(100% - 24px);
+
   & svg {
     font-size: 148px;
   }
@@ -37,10 +43,12 @@
 @include from-medium-up {
   .Row {
     flex-direction: row;
+
     &:nth-child(even) {
       flex-direction: row-reverse;
     }
   }
+
   .ImageContainer {
     width: 400px;
     height: 300px;

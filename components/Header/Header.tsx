@@ -17,6 +17,7 @@ import Image from "next/image";
 const MenuItems: { link: string; text: string }[] = [
   { link: "/about", text: "About me" },
   { link: "/blog", text: "Blog" },
+  { link: "/services", text: "Services" },
 ];
 
 const Header: FC = () => {
