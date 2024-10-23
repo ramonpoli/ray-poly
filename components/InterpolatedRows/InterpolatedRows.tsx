@@ -10,6 +10,7 @@ type Row = {
     url: string;
     alt: string;
   };
+  onClick?: () => void;
 };
 type Props = {
   rows: Row[];
@@ -19,7 +20,7 @@ const InterpolatedRows: FC<Props> = ({ rows }) => {
     <Stack>
       {rows.map((row: Row, index: number) => {
         return (
-          <div className={InterpolatedRowsStyles.Row} key={`row-${index}`}>
+          <div className={`${InterpolatedRowsStyles.Row}${row.onClick ? ' ' + InterpolatedRowsStyles.RowPointer : ''}`} key={`row-${index}`} onClick={() => { row.onClick && row.onClick() }}>
             <div className={InterpolatedRowsStyles.ImageContainer}>
               <Image
                 src={row.image.url}
