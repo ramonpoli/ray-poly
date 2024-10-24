@@ -17,6 +17,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${process.env.SERVER_URL}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: `${process.env.SERVER_URL}/services/e-commerce-website`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.8,
+    },
     ...blogPosts?.map((blogPost) => ({
       url: `${process.env.SERVER_URL}/blog/${blogPost.slug}`,
       lastModified: new Date(),
