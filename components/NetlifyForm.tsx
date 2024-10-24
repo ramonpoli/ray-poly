@@ -8,7 +8,7 @@ type Props = {
 };
 const NetlifyForm: FC<Props> = ({ hasSubmitted }) => {
   return (
-    <form name="contact" netlify >
+    <form name="contact" data-netlify={'true'} >
       <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} gap={'1rem'} mb={4} maxWidth={'40rem'}>
         <h3>Require service</h3>
         <Box display={'flex'} flexDirection={{ xs: 'column', lg: 'row' }} justifyContent={'space-betwen'} gap={'1rem'} mb={4}>
