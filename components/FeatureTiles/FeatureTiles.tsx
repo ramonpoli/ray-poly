@@ -1,9 +1,7 @@
 import { FC } from "react";
 import FeatureTilesStyles from "./FeatureTiles.module.scss";
 import Subtitle1 from "../Typography/Subtitle1/Subtitle1";
-import { SvgIcon, Typography } from "@mui/material";
-import Title from "../Typography/Title/Title";
-import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import { Typography } from "@mui/material";
 import CenteredIcon, { CenteredIconProps } from "../CenteredIcon/CenteredIcon";
 
 const FeatureTiles: FC = () => {
@@ -17,7 +15,7 @@ const FeatureTiles: FC = () => {
     content: string;
   }) => {
     return (
-      <section className={FeatureTilesStyles.Feature}>
+      <div className={FeatureTilesStyles.Feature}>
         <CenteredIcon icon={icon} />
         <div className={FeatureTilesStyles.FeatureContent}>
           <Typography variant="h2" fontWeight={600} fontSize={"2.5em"}>
@@ -25,7 +23,7 @@ const FeatureTiles: FC = () => {
           </Typography>
           <Typography>{content}</Typography>
         </div>
-      </section>
+      </div>
     );
   };
   return (

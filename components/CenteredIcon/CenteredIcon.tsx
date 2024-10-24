@@ -1,4 +1,4 @@
-import { SvgIcon, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { FC } from "react";
 import CenteredIconStyles from "./CenteredIcon.module.scss";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";

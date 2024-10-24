@@ -8,12 +8,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.Image {
-  padding: 0.75rem;
-  border-radius: inherit !important;
-  max-width: calc(100% - 24px);
-  max-height: calc(100% - 24px);
-  font-size: 148px;
+  .Image {
+    padding: 0.75rem;
+    border-radius: inherit !important;
+    max-width: calc(100% - 24px);
+    max-height: calc(100% - 24px);
+    font-size: 148px;
+  }
+
 }
