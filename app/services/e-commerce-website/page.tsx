@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import ECommerceWebsitePage from "./ECommerceWebsitePage";
 
 const title = "E-commerce website";
@@ -11,6 +12,6 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <ECommerceWebsitePage title={title} description={description} />
+    <Suspense><ECommerceWebsitePage title={title} description={description} /></Suspense>
   );
 }
