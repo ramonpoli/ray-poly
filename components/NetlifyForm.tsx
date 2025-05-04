@@ -1,4 +1,4 @@
-o'use client'
+'use client'
 import { Box, TextField } from "@mui/material";
 import { FC } from "react";
 import PrimaryButton from "./Buttons/PrimaryButton/PrimaryButton";
