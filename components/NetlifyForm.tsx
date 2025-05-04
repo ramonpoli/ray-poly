@@ -1,4 +1,4 @@
-'use client'
+o'use client'
 import { Box, TextField } from "@mui/material";
 import { FC } from "react";
 import PrimaryButton from "./Buttons/PrimaryButton/PrimaryButton";
@@ -8,7 +8,7 @@ type Props = {
 };
 const NetlifyForm: FC<Props> = ({ hasSubmitted }) => {
   return (
-    <form name="contact" data-netlify={'true'} >
+    <form name="contact" data-netlify={'true'} method={'POST'}>
       <Box display={'flex'} flexDirection={'column'} justifyContent={'space-between'} gap={'1rem'} mb={4} maxWidth={'40rem'}>
         <h3>Require service</h3>
         <Box display={'flex'} flexDirection={{ xs: 'column', lg: 'row' }} justifyContent={'space-betwen'} gap={'1rem'} mb={4}>
