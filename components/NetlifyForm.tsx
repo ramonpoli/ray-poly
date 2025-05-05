@@ -10,6 +10,7 @@ const NetlifyForm: FC = () => {
 		<form
 			data-netlify="true"
 			name="contact"
+			method="POST"
 			onSubmit={() => {
 				setHasSubmitted(true);
 			}}
