@@ -1,10 +1,15 @@
 "use client";
-import { Alert, Box, TextField } from "@mui/material";
+import { Alert, Box, TextareaAutosize, TextField } from "@mui/material";
 import type { FC, FormEvent } from "react";
 import { useState } from "react";
 import PrimaryButton from "./Buttons/PrimaryButton/PrimaryButton";
 
-const NetlifyForm: FC = () => {
+interface Props {
+	formName: string;
+	formTitle: string;
+}
+
+const NetlifyForm: FC<Props> = ({ formName, formTitle }) => {
 	const [status, setStatus] = useState<string | null>(null);
 	const [error, setError] = useState<string | null>(null);
 	const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -29,43 +34,48 @@ const NetlifyForm: FC = () => {
 		}
 	};
 	return (
-		<form data-netlify="true" name="contact" onSubmit={handleFormSubmit}>
+		<form
+			data-netlify="true"
+			name={formName}
+			onSubmit={handleFormSubmit}
+			style={{ alignSelf: "stretch" }}
+		>
 			<Box
 				display={"flex"}
 				flexDirection={"column"}
 				justifyContent={"space-between"}
 				gap={"1rem"}
 				mb={4}
-				maxWidth={"40rem"}
+				maxWidth={"400rem"}
 			>
-				<h3>Require service</h3>
+				<h3>{formTitle}</h3>
 				<Box
 					display={"flex"}
-					flexDirection={{ xs: "column", lg: "row" }}
+					flexDirection={"column"}
 					justifyContent={"space-betwen"}
 					gap={"1rem"}
 					mb={4}
 				>
-					<TextField
-						required
-						name={"name"}
-						label={"Name"}
-						variant={"filled"}
-						sx={{ flex: 1 }}
-					/>
-					<TextField
-						required
-						name={"email"}
-						label={"Email"}
-						variant={"filled"}
-						sx={{ flex: 1 }}
-					/>
-					<TextField
+					<Box width={{ md: "50%" }}>
+						<TextField
+							required
+							name={"email"}
+							label={"Email"}
+							variant={"filled"}
+							fullWidth
+						/>
+					</Box>
+					<TextareaAutosize
 						required
 						name={"message"}
-						label={"Message"}
-						variant={"filled"}
-						sx={{ flex: 1 }}
+						placeholder={"Message"}
+						minRows={3}
+						style={{
+							border: "2px solid var(--TextField-brandBorderColor)",
+							borderBottom: "2px solid rgb(0, 255, 194)",
+							background: "var(--TextField-brandBorderColor)",
+							paddingBottom: "1rem",
+						}}
 					/>
 				</Box>
 				{status === "ok" && <Alert severity="success">Submitted!</Alert>}

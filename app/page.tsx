@@ -6,6 +6,7 @@ import SocialMedias from "@/components/SocialMedias/SocialMedias";
 import ListOfFeatures from "@/components/ListOfFeatures/ListOfFeatures";
 import { Fragment } from "react";
 import { sendGoogleEvent } from "@/utils/googleAnalytics";
+import NetlifyForm from "@/components/NetlifyForm";
 
 export default function Home() {
 	return (
@@ -32,6 +33,8 @@ export default function Home() {
 			<SocialMedias />
 			<Divider />
 			<ListOfFeatures />
+			<Divider />
+			<NetlifyForm formName="contact" formTitle="Contact me" />
 			<Divider />
 		</Fragment>
 	);

@@ -22,7 +22,6 @@ export const theme = createTheme({
       secondary: secondaryColor,
       disabled: "rgb(0, 178, 135)",
     },
-
   },
   components: {
     MuiButton: {
@@ -35,11 +34,11 @@ export const theme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: {
-          '--TextField-brandBorderColor': primaryColor,
-          '--TextField-brandBorderHoverColor': primaryColor,
-          '--TextField-brandBorderFocusedColor': primaryColor,
-          '& label': {
-            color: 'var(--TextField-brandBorderFocusedColor)',
+          "--TextField-brandBorderColor": primaryColor,
+          "--TextField-brandBorderHoverColor": primaryColor,
+          "--TextField-brandBorderFocusedColor": primaryColor,
+          "& label": {
+            color: "var(--TextField-brandBorderFocusedColor)",
           },
         },
       },
@@ -47,14 +46,14 @@ export const theme = createTheme({
     MuiFilledInput: {
       styleOverrides: {
         root: {
-          '&::before, &::after': {
-            borderBottom: '2px solid var(--TextField-brandBorderColor)',
+          "&::before, &::after": {
+            borderBottom: "2px solid var(--TextField-brandBorderColor)",
           },
-          '&:hover:not(.Mui-disabled, .Mui-error):before': {
-            borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
+          "&:hover:not(.Mui-disabled, .Mui-error):before": {
+            borderBottom: "2px solid var(--TextField-brandBorderHoverColor)",
           },
-          '&.Mui-focused:after': {
-            borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
+          "&.Mui-focused:after": {
+            borderBottom: "2px solid var(--TextField-brandBorderFocusedColor)",
           },
         },
       },
@@ -62,18 +61,17 @@ export const theme = createTheme({
     MuiInput: {
       styleOverrides: {
         root: {
-          '&::before': {
-            borderBottom: '2px solid var(--TextField-brandBorderColor)',
+          "&::before": {
+            borderBottom: "2px solid var(--TextField-brandBorderColor)",
           },
-          '&:hover:not(.Mui-disabled, .Mui-error):before': {
-            borderBottom: '2px solid var(--TextField-brandBorderHoverColor)',
+          "&:hover:not(.Mui-disabled, .Mui-error):before": {
+            borderBottom: "2px solid var(--TextField-brandBorderHoverColor)",
           },
-          '&.Mui-focused:after': {
-            borderBottom: '2px solid var(--TextField-brandBorderFocusedColor)',
+          "&.Mui-focused:after": {
+            borderBottom: "2px solid var(--TextField-brandBorderFocusedColor)",
           },
         },
       },
     },
-
   },
 });

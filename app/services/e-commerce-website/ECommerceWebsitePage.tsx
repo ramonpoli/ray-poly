@@ -19,7 +19,10 @@ const ECommerceWebsitePage: FC<Props> = ({ title, description }) => {
 					alt: "boilerplate e-commerce website image",
 				}}
 			/>
-			<NetlifyForm />
+			<NetlifyForm
+				formName="requestEcommerceWebsite"
+				formTitle="Request e-commerce website"
+			/>
 		</div>
 	);
 };
