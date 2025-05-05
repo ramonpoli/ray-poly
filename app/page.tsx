@@ -27,7 +27,12 @@ export default function Home() {
 				}}
 			/>
 			<Divider />
-			<form name="contact" method="POST" data-netlify="true">
+			<form
+				name="contact"
+				method="POST"
+				data-netlify="true"
+				action="/__forms.html"
+			>
 				<p>
 					<label>
 						Your Name: <input type="text" name="name" />
