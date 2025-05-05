@@ -1,19 +1,24 @@
 "use client";
 import { Box, TextField } from "@mui/material";
-import type { FC } from "react";
+import type { FC, FormEvent } from "react";
+import { useState } from "react";
 import PrimaryButton from "./Buttons/PrimaryButton/PrimaryButton";
 
-type Props = {
-	hasSubmitted: boolean;
-};
-const NetlifyForm: FC<Props> = ({ hasSubmitted }) => {
+const NetlifyForm: FC = () => {
+	const [hasSubmitted, setHasSubmitted] = useState(false);
+	const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		const formData = new FormData(event.currentTarget);
+		await fetch("/__forms.html", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+			body: new URLSearchParams(formData as any).toString(),
+		});
+		setHasSubmitted(true);
+	};
 	return (
-		<form
-			data-netlify="true"
-			name="contact"
-			method="post"
-			action="/post-success"
-		>
+		<form data-netlify="true" name="contact" onSubmit={handleFormSubmit}>
 			<Box
 				display={"flex"}
 				flexDirection={"column"}
