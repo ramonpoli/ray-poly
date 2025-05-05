@@ -9,12 +9,17 @@ const NetlifyForm: FC = () => {
 	const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const formData = new FormData(event.currentTarget);
-		await fetch("/__forms.html", {
-			method: "POST",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-			body: new URLSearchParams(formData as any).toString(),
-		});
+		formData.append("form-name", "contact");
+		try {
+			await fetch("/__forms.html", {
+				method: "POST",
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+				body: new URLSearchParams(formData as any).toString(),
+			});
+		} catch (error) {
+			console.error(error);
+		}
 		setHasSubmitted(true);
 	};
 	return (
