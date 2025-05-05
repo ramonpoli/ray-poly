@@ -49,6 +49,13 @@ const NetlifyForm: FC = () => {
 						variant={"filled"}
 						sx={{ flex: 1 }}
 					/>
+					<TextField
+						required
+						name={"message"}
+						label={"Message"}
+						variant={"filled"}
+						sx={{ flex: 1 }}
+					/>
 				</Box>
 				{hasSubmitted && (
 					<p>Thank you for your interest, I&apos;ll be in contact soon!</p>
