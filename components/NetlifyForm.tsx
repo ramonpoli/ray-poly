@@ -1,5 +1,5 @@
 "use client";
-import { Alert, Box, TextareaAutosize, TextField } from "@mui/material";
+import { Alert, Box, TextField } from "@mui/material";
 import type { FC, FormEvent } from "react";
 import { useState } from "react";
 import PrimaryButton from "./Buttons/PrimaryButton/PrimaryButton";
