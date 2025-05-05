@@ -11,7 +11,7 @@ const NetlifyForm: FC = () => {
 		const formData = new FormData(event.currentTarget);
 		formData.append("form-name", "contact");
 		try {
-			await fetch("/__forms.html", {
+			await fetch("/forms.html", {
 				method: "POST",
 				headers: { "Content-Type": "application/x-www-form-urlencoded" },
 				// biome-ignore lint/suspicious/noExplicitAny: <explanation>
