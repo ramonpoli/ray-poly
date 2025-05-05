@@ -70,9 +70,7 @@ const NetlifyForm: FC = () => {
 				</Box>
 				{status === "ok" && <Alert severity="success">Submitted!</Alert>}
 				{status === "error" && <Alert severity="error">{error}</Alert>}
-				<PrimaryButton type="submit" disabled={hasSubmitted}>
-					Submit
-				</PrimaryButton>
+				<PrimaryButton type="submit">Submit</PrimaryButton>
 			</Box>
 		</form>
 	);
