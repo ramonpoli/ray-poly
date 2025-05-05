@@ -33,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     })) ?? []),
     {
-      url: `${process.env.SERVER_URL}/__forms.html`,
+      url: `${process.env.SERVER_URL}/forms.html`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.8,

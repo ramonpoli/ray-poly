@@ -1,26 +1,32 @@
 "use client";
-import { Box, TextField } from "@mui/material";
+import { Alert, Box, TextField } from "@mui/material";
 import type { FC, FormEvent } from "react";
 import { useState } from "react";
 import PrimaryButton from "./Buttons/PrimaryButton/PrimaryButton";
 
 const NetlifyForm: FC = () => {
-	const [hasSubmitted, setHasSubmitted] = useState(false);
+	const [status, setStatus] = useState<string | null>(null);
+	const [error, setError] = useState<string | null>(null);
 	const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		const formData = new FormData(event.currentTarget);
 		formData.append("form-name", "contact");
 		try {
-			await fetch("/forms.html", {
+			const response = await fetch("/forms.html", {
 				method: "POST",
 				headers: { "Content-Type": "application/x-www-form-urlencoded" },
 				// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 				body: new URLSearchParams(formData as any).toString(),
 			});
+			if (response.status === 200) {
+				setStatus("ok");
+			} else {
+				setStatus("error");
+				setError(`${response.status} ${response.statusText}`);
+			}
 		} catch (error) {
 			console.error(error);
 		}
-		setHasSubmitted(true);
 	};
 	return (
 		<form data-netlify="true" name="contact" onSubmit={handleFormSubmit}>
@@ -62,9 +68,8 @@ const NetlifyForm: FC = () => {
 						sx={{ flex: 1 }}
 					/>
 				</Box>
-				{hasSubmitted && (
-					<p>Thank you for your interest, I&apos;ll be in contact soon!</p>
-				)}
+				{status === "ok" && <Alert severity="success">Submitted!</Alert>}
+				{status === "error" && <Alert severity="error">{error}</Alert>}
 				<PrimaryButton type="submit" disabled={hasSubmitted}>
 					Submit
 				</PrimaryButton>
