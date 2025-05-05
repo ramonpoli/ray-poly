@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import InterpolatedRows from "@/components/InterpolatedRows/InterpolatedRows";
 import { useRouter } from "next/navigation";
 import { Fragment } from "react";
@@ -19,9 +19,10 @@ export default function Services() {
             },
             onClick: () => {
               router.push("/services/e-commerce-website");
-            }
+            },
           },
         ]}
-      /></Fragment>
+      />
+    </Fragment>
   );
 }
