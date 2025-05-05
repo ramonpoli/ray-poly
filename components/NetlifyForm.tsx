@@ -65,17 +65,14 @@ const NetlifyForm: FC<Props> = ({ formName, formTitle }) => {
 							fullWidth
 						/>
 					</Box>
-					<TextareaAutosize
+					<TextField
 						required
 						name={"message"}
+						label={"Message"}
 						placeholder={"Message"}
-						minRows={3}
-						style={{
-							border: "2px solid var(--TextField-brandBorderColor)",
-							borderBottom: "2px solid rgb(0, 255, 194)",
-							background: "var(--TextField-brandBorderColor)",
-							paddingBottom: "1rem",
-						}}
+						multiline
+						rows={3}
+						fullWidth
 					/>
 				</Box>
 				{status === "ok" && <Alert severity="success">Submitted!</Alert>}
