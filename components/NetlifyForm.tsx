@@ -10,12 +10,16 @@ const NetlifyForm: FC = () => {
 		event.preventDefault();
 		const formData = new FormData(event.currentTarget);
 		formData.append("form-name", "contact");
+		const mockObject = {
+			name: "John Doe",
+			email: "john.doe@example.com",
+			message: "Hello, world!",
+		};
 		try {
 			await fetch("/__forms.html", {
 				method: "POST",
 				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				// biome-ignore lint/suspicious/noExplicitAny: <explanation>
-				body: new URLSearchParams(formData as any).toString(),
+				body: new URLSearchParams(mockObject).toString(),
 			});
 		} catch (error) {
 			console.error(error);
