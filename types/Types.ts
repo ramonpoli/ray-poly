@@ -3,12 +3,21 @@ export type BlogPostInformation = {
   description: string;
   image?: string;
   keywords?: string[];
-}
+};
 
 export type BlogPost = BlogPostInformation & {
   content: string;
-}
+};
 
 export type BlogPostInformationFile = BlogPostInformation & {
   slug: string;
-}
+};
+
+export type FeatureCardType = {
+  image: {
+    src: string;
+    alt: string;
+  };
+  title: string;
+  content: string;
+};
