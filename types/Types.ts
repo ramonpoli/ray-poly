@@ -15,9 +15,10 @@ export type BlogPostInformationFile = BlogPostInformation & {
 
 export type FeatureCardType = {
   image: {
-    src: string;
+    src: string | React.ReactNode;
     alt: string;
   };
   title: string;
-  content: string;
+  content?: string;
+  href?: string;
 };
