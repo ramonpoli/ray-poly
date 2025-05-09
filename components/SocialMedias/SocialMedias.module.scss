@@ -1,6 +1,10 @@
-.IconLink {
-  visibility: hidden;
-  &.Visible {
-    visibility: visible;
+@import "../../styles/breakpoints.scss";
+
+.SocialMedias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  @include from-small-up {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
