@@ -72,7 +72,7 @@ const ListOfFeatures: React.FC = () => {
 	return (
 		<section className={styles.container}>
 			<Typography variant="h2" className={styles.title}>
-				Things I've done
+				Things I&apos;ve done
 			</Typography>
 			<div className={styles.projects}>
 				{projects.map((project, index) => (
