@@ -22,3 +22,12 @@ export type FeatureCardType = {
   content?: string;
   href?: string;
 };
+
+export type ProjectType = {
+  image: {
+    src: string | React.ReactNode;
+    alt: string;
+  };
+  title: string;
+  description: string;
+};
